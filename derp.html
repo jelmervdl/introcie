@@ -1,0 +1,177 @@
+<?php
+session_start();
+header('Cache-control: private'); // IE 6 FIX
+
+if(isSet($_GET['lang']))
+{
+$lang = $_GET['lang'];
+
+// register the session and set the cookie
+$_SESSION['lang'] = $lang;
+
+setcookie('lang', $lang, time() + (3600 * 24 * 30));
+}
+else if(isSet($_SESSION['lang']))
+{
+$lang = $_SESSION['lang'];
+}
+else if(isSet($_COOKIE['lang']))
+{
+$lang = $_COOKIE['lang'];
+}
+else
+{
+$lang = 'en';
+}
+
+switch ($lang) {
+  case 'en':
+  $lang_file = 'lang_en.php';
+  break;
+
+  case 'nl':
+  $lang_file = 'lang_nl.php';
+  break;
+
+  default:
+  $lang_file = 'lang_nl.php';
+
+}
+
+include_once .$lang_file;
+?>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>
+		<?php echo $lang['PAGE_TITLE']; ?>
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="jquery-1.9.1.min.js" type="text/javascript" charset="utf-8">
+   	</script>	
+   	<script type="text/javascript" charset="utf-8">
+   	$(document).ready(function() {
+   		$("#banner a").bind("click",function(event){
+   			event.preventDefault();
+   			var target = $(this).attr("href");
+   			$("html, body").stop().animate({
+   				scrollLeft: $(target).offset().left,
+   				scrollTop: $(target).offset().top
+   			}, 1200);
+   		});
+   	});
+   	</script>
+
+   </head>
+   <body>
+
+   	<div id="banner">
+   		<ul>
+   			<li>
+   				<a href="#home"><?php echo $lang['MENU_HOME']; ?></a>
+   			</li>  
+   			<li>   
+   				<a href="#kamp"><?php echo $lang['MENU_KAMP']; ?></a>
+   			</li>  
+   			<li>   
+   				<a href="#organisatie"><?php echo $lang['MENU_ORGANISATIE']; ?></a>
+   			</li>  
+   			<li>   
+   				<a href="#thema"><?php echo $lang['MENU_THEMA']; ?></a>
+   			</li>
+            <li>
+               <a href="#inschrijven"><?php echo $lang['MENU_INSCHRIJVEN']; ?></a>
+            </li>
+            <li>
+               <a href="#gastenboek"><?php echo $lang['MENU_GASTENBOEK']; ?></a>
+            </li>
+            <li>
+               <a href="#contact"><?php echo $lang['MENU_CONTACT']; ?></a>
+            </li>
+   		</ul>
+   	</div>
+   	<div id="home" class="panel">
+   		<h2>
+   			Home
+   		</h2>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   	</div>
+   	<div id="kamp" class="panel">
+   		<h2>
+   			Newsletter
+   		</h2>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   	</div>
+   	<div id="organisatie" class="panel">
+   		<h2>
+   			Directions
+   		</h2>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   	</div>
+      <div id="thema" class="panel">
+         <h2>
+            VULLING
+         </h2>
+         <h2>
+            VULLING
+         </h2>
+         <h2>
+            VULLING
+         </h2>
+         <h2>
+            VULLING
+         </h2>
+         <h2>
+            VULLING
+         </h2>
+         <h2>
+            VULLING
+         </h2>
+      
+      </div>
+   	<div id="gastenboek" class="panel">
+   		<h2>
+   			Contact
+   		</h2>
+   		<p>
+   			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   		</p>
+   	</div>
+      <div id="contact" class="panel">
+         <h2>
+            Filler
+         </h2>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         </p>
+      </div>
+   </body>
+   </html>

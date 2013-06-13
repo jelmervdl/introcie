@@ -1,0 +1,132 @@
+body {		min-width: 900px;
+	height: 100%;
+	width: 14000px;
+	margin: 0;
+	overflow-x: hidden;
+	color: #000000;
+	background-repeat: vertical;
+	/*mozilla rainbow gradient*/	
+	background-size: 14000px 100%;
+
+	background-image: -webkit-linear-gradient(180deg, #B601b3,
+		#B601B3 2%, #9106D3 4%, #6B16EC 6%, #472FFA 8%, #2850FE 10%,
+		#1175F7 12%, #039BE5 14%, #01BECA 16%, #0ADCA8 18%, #1DF283 20%,
+		#3AFD5D 22%, #5CFD3A 24%, #82F21E 26%, #A7DD0A 28%, #C9BF01 30%,
+		#E49C03 32%, #F77610 34%, #FE5127 36%, #FB3046 38%, #EC166A 40%,
+		#D40690 42%, #BF01B5 44%, #8F06D5 46%, #9106D3 48%, #6B16EC 50%,
+		#472FFA 52%, #2850FE 54%, #1175F7 56%, #039BE5 58%, #01BECA 60%,
+		#0ADCA8 62%, #1DF283 64%, #3AFD5D 66%, #5CFD3A 68%, #82F21E 70%,
+		#A7DD0A 72%, #C9BF01 74%, #E49C03 76%, #F77610 78%, #FE5127 80%,
+		#FB3046 82%, #EC166A 84%, #D40690 86%, #BF01B5 88%, #8F06D5 90%,
+		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
+	background-image: -moz-linear-gradient(180deg, #B601b3,
+		#B601B3 2%, #9106D3 4%, #6B16EC 6%, #472FFA 8%, #2850FE 10%,
+		#1175F7 12%, #039BE5 14%, #01BECA 16%, #0ADCA8 18%, #1DF283 20%,
+		#3AFD5D 22%, #5CFD3A 24%, #82F21E 26%, #A7DD0A 28%, #C9BF01 30%,
+		#E49C03 32%, #F77610 34%, #FE5127 36%, #FB3046 38%, #EC166A 40%,
+		#D40690 42%, #BF01B5 44%, #8F06D5 46%, #9106D3 48%, #6B16EC 50%,
+		#472FFA 52%, #2850FE 54%, #1175F7 56%, #039BE5 58%, #01BECA 60%,
+		#0ADCA8 62%, #1DF283 64%, #3AFD5D 66%, #5CFD3A 68%, #82F21E 70%,
+		#A7DD0A 72%, #C9BF01 74%, #E49C03 76%, #F77610 78%, #FE5127 80%,
+		#FB3046 82%, #EC166A 84%, #D40690 86%, #BF01B5 88%, #8F06D5 90%,
+		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
+	background-image: -o-linear-gradient(180deg, #B601b3,
+		#B601B3 2%, #9106D3 4%, #6B16EC 6%, #472FFA 8%, #2850FE 10%,
+		#1175F7 12%, #039BE5 14%, #01BECA 16%, #0ADCA8 18%, #1DF283 20%,
+		#3AFD5D 22%, #5CFD3A 24%, #82F21E 26%, #A7DD0A 28%, #C9BF01 30%,
+		#E49C03 32%, #F77610 34%, #FE5127 36%, #FB3046 38%, #EC166A 40%,
+		#D40690 42%, #BF01B5 44%, #8F06D5 46%, #9106D3 48%, #6B16EC 50%,
+		#472FFA 52%, #2850FE 54%, #1175F7 56%, #039BE5 58%, #01BECA 60%,
+		#0ADCA8 62%, #1DF283 64%, #3AFD5D 66%, #5CFD3A 68%, #82F21E 70%,
+		#A7DD0A 72%, #C9BF01 74%, #E49C03 76%, #F77610 78%, #FE5127 80%,
+		#FB3046 82%, #EC166A 84%, #D40690 86%, #BF01B5 88%, #8F06D5 90%,
+		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
+	background-image: -ms-linear-gradient(180deg, #B601b3,
+		#B601B3 2%, #9106D3 4%, #6B16EC 6%, #472FFA 8%, #2850FE 10%,
+		#1175F7 12%, #039BE5 14%, #01BECA 16%, #0ADCA8 18%, #1DF283 20%,
+		#3AFD5D 22%, #5CFD3A 24%, #82F21E 26%, #A7DD0A 28%, #C9BF01 30%,
+		#E49C03 32%, #F77610 34%, #FE5127 36%, #FB3046 38%, #EC166A 40%,
+		#D40690 42%, #BF01B5 44%, #8F06D5 46%, #9106D3 48%, #6B16EC 50%,
+		#472FFA 52%, #2850FE 54%, #1175F7 56%, #039BE5 58%, #01BECA 60%,
+		#0ADCA8 62%, #1DF283 64%, #3AFD5D 66%, #5CFD3A 68%, #82F21E 70%,
+		#A7DD0A 72%, #C9BF01 74%, #E49C03 76%, #F77610 78%, #FE5127 80%,
+		#FB3046 82%, #EC166A 84%, #D40690 86%, #BF01B5 88%, #8F06D5 90%,
+		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
+}
+
+
+.panel {
+	width: 930px;
+	float: left;
+	padding-left: 30px;
+	padding-right: 1040px;
+	margin-top: 45px;
+	height: 90%
+
+}
+.contentpanel {
+	min-width: 700px;
+	min-height: 300px;
+	width: 90%;
+	height: 90%;
+	padding: 10px;
+	float: left;
+	margin-left: 10%;
+	margin-top: 90px;
+	background: #eee;
+	border-radius: 30px;
+	
+
+}
+
+#menu{
+	position: relative;
+}
+#banner{
+	position: fixed;
+	text-align: center;
+	background-color: #FFFFFF;
+	width: 100%;
+}
+
+#banner ul {
+	line-height: 45px;
+	margin: 0 30px;
+	padding: 0;
+	display: inline;
+}
+.menu_li {
+	display: inline;
+	margin-right: 30px;
+	border-radius: 20px;
+	background-color: #FF8800;
+	padding: 5px;
+	text-decoration: none;
+	color: #1500FF;
+}
+.menu_li a{
+	text-decoration: none;
+}
+#land1{
+	position: relative;
+	display: inline;
+	text-align: right;
+	padding: 4px;
+	margin: 0px;
+	margin-top: 10px;	
+}
+#land2{
+	position: relative;
+	display: inline;
+	text-align: right;
+	padding: 4px;
+	margin: 0px; 
+	margin-top: 10px;
+}
+#landen{
+	width: 140px;
+	position: fixed;
+	right: 0px;
+	top: 8px;
+	height: 45px;
+}
