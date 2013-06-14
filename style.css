@@ -1,12 +1,12 @@
-body {		min-width: 900px;
+body {
 	height: 100%;
-	width: 14000px;
 	margin: 0;
 	overflow-x: hidden;
+	
 	color: #000000;
-	background-repeat: vertical;
-	/*mozilla rainbow gradient*/	
-	background-size: 14000px 100%;
+	
+	background-repeat: repeat-y;
+	/*background-size: 100% 100%;*/
 
 	background-image: -webkit-linear-gradient(180deg, #B601b3,
 		#B601B3 2%, #9106D3 4%, #6B16EC 6%, #472FFA 8%, #2850FE 10%,
@@ -52,81 +52,58 @@ body {		min-width: 900px;
 		#A7DD0A 72%, #C9BF01 74%, #E49C03 76%, #F77610 78%, #FE5127 80%,
 		#FB3046 82%, #EC166A 84%, #D40690 86%, #BF01B5 88%, #8F06D5 90%,
 		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
-}
 
+}
 
 .panel {
-	width: 930px;
 	float: left;
-	padding-left: 30px;
-	padding-right: 1040px;
-	margin-top: 45px;
-	height: 90%
-
 }
+
 .contentpanel {
-	min-width: 700px;
-	min-height: 300px;
-	width: 90%;
-	height: 90%;
-	padding: 10px;
-	float: left;
-	margin-left: 10%;
-	margin-top: 90px;
+	margin: 61px auto 16px auto;
+	padding: 30px;
+	max-width: 800px;
 	background: #eee;
 	border-radius: 30px;
-	
-
 }
 
-#menu{
-	position: relative;
-}
-#banner{
+#banner {
 	position: fixed;
 	text-align: center;
-	background-color: #FFFFFF;
+	background: #fff;
 	width: 100%;
+
+	top: 0;
+	left: 0;
 }
 
 #banner ul {
 	line-height: 45px;
-	margin: 0 30px;
-	padding: 0;
+}
+
+#banner .menu li {
 	display: inline;
 }
-.menu_li {
-	display: inline;
-	margin-right: 30px;
+
+#banner .menu li a {
 	border-radius: 20px;
-	background-color: #FF8800;
-	padding: 5px;
-	text-decoration: none;
+	background: #f80;
+	padding: 4px 16px;
 	color: #1500FF;
-}
-.menu_li a{
 	text-decoration: none;
 }
-#land1{
-	position: relative;
-	display: inline;
-	text-align: right;
-	padding: 4px;
-	margin: 0px;
-	margin-top: 10px;	
+
+#banner .menu li a:hover {
+	background: red;
 }
-#land2{
-	position: relative;
-	display: inline;
-	text-align: right;
-	padding: 4px;
-	margin: 0px; 
-	margin-top: 10px;
-}
-#landen{
-	width: 140px;
-	position: fixed;
+
+#landen {
+	position: absolute;
 	right: 0px;
 	top: 8px;
 	height: 45px;
+}
+
+#landen li {
+	display: inline;
 }

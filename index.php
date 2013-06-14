@@ -72,58 +72,28 @@ include_once 'languages/'.$lang_file;
    <title>
       <?php echo $lang['PAGE_TITLE']; ?>
    </title>
+   <link rel="stylesheet" type="text/css" href="reset.css">
    <link rel="stylesheet" type="text/css" href="style.css">
    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-   <script src="jquery-1.9.1.min.js" type="text/javascript" charset="utf-8">
-   </script>   
-   <script type="text/javascript" charset="utf-8">
-   $(document).ready(function() {
-      $("#banner .menu_li a").bind("click",function(event){
-         event.preventDefault();
-         var target = $(this).attr("href");
-         $("html, body").stop().animate({
-            scrollLeft: $(target).offset().left,
-            scrollTop: $(target).offset().top
-         }, 1200);
-      });
-   });
-   </script>
-
+   <script src="jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
    <div id="banner">
-
-      <ul>
-         <li class="menu_li">
-            <a href="#home"><?php echo $lang['MENU_HOME']; ?></a>
-         </li>  
-         <li class="menu_li">   
-            <a href="#kamp"><?php echo $lang['MENU_KAMP']; ?></a>
-         </li>   
-         <li class="menu_li">   
-            <a href="#organisatie"><?php echo $lang['MENU_ORGANISATIE']; ?></a>
-         </li>  
-         <li class="menu_li">   
-            <a href="#thema"><?php echo $lang['MENU_THEMA']; ?></a>
-         </li>
-         <li class="menu_li">
-            <a href="#inschrijven"><?php echo $lang['MENU_INSCHRIJVEN']; ?></a>
-         </li>
-         <li class="menu_li">
-            <a href="#gastenboek"><?php echo $lang['MENU_GASTENBOEK']; ?></a>
-         </li>
-         <li class="menu_li">
-            <a href="#contact"><?php echo $lang['MENU_CONTACT']; ?></a>
-         </li>
+      <ul class="menu">
+         <li><a href="#home"><?php echo $lang['MENU_HOME']; ?></a></li>  
+         <li><a href="#kamp"><?php echo $lang['MENU_KAMP']; ?></a></li>   
+         <li><a href="#organisatie"><?php echo $lang['MENU_ORGANISATIE']; ?></a></li>  
+         <li><a href="#thema"><?php echo $lang['MENU_THEMA']; ?></a></li>
+         <li><a href="#inschrijven"><?php echo $lang['MENU_INSCHRIJVEN']; ?></a></li>
+         <li><a href="#gastenboek"><?php echo $lang['MENU_GASTENBOEK']; ?></a></li>
+         <li><a href="#contact"><?php echo $lang['MENU_CONTACT']; ?></a></li>
       </ul>
       <ul id="landen">
-         <li id="land1"><a href="index.php?lang=en"><img src="images/uk_small.gif" height="30px" width="60px" alt="English"></a></li>
-         <li id="land2"><a href="index.php?lang=nl"><img src="images/nl_small.gif" height="30px" width="60px"></a></li>
+         <li><a href="index.php?lang=en"><img src="images/uk_small.gif" height="30" width="60" alt="English"></a></li>
+         <li><a href="index.php?lang=nl"><img src="images/nl_small.gif" height="30" width="60" alt="Nederlands"></a></li>
       </ul>
-
-
    </div>
 
 
@@ -270,5 +240,29 @@ include_once 'languages/'.$lang_file;
       </p>
    </div>
 </div>
+<script>
+   $("#banner .menu a").bind("click",function(event){
+      event.preventDefault();
+      var target = $(this).attr("href");
+      $("html, body").stop().animate({
+         scrollLeft: $(target).offset().left,
+         scrollTop: $(target).offset().top
+      }, 1200);
+   });
+
+   function resize()
+   {
+      $('.panel').css('width', window.innerWidth);
+
+      $('body').css('width', window.innerWidth * $('.panel').length);
+
+      $('body').css('background-size', (window.innerWidth * $('.panel').length) + 'px 100%');
+   }
+
+   window.onresize = resize;
+
+   resize();
+   
+</script>
 </body>
 </html>
