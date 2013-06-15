@@ -100,8 +100,11 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
          <li><a href="#contact"><?php echo $lang_menu['contact'] ?></a></li>
       </ul>
       <ul id="landen">
+         <?php if ($lang == 'nl'): ?>
          <li><a href="index.php?lang=en"><img src="images/uk_small.gif" height="30" width="60" alt="English"></a></li>
+         <?php else: ?>
          <li><a href="index.php?lang=nl"><img src="images/nl_small.gif" height="30" width="60" alt="Nederlands"></a></li>
+         <?php endif ?>
       </ul>
    </nav>
 
@@ -194,9 +197,9 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
       update_panel_width();
    };
 
-   update_scrollspy();
-
    update_panel_width();
+   
+   update_scrollspy();
    
 </script>
 </body>
