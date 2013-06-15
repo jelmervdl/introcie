@@ -1,13 +1,13 @@
 body {
 	height: 100%;
 	margin: 0;
-	overflow-x: hidden;
 	
 	color: #000000;
+	font: 16px/22px sans-serif;
 	
 	background-repeat: repeat-y;
 	/*background-size: 100% 100%;*/
-
+	/*
 	background-image: -webkit-linear-gradient(180deg, #B601b3,
 		#B601B3 2%, #9106D3 4%, #6B16EC 6%, #472FFA 8%, #2850FE 10%,
 		#1175F7 12%, #039BE5 14%, #01BECA 16%, #0ADCA8 18%, #1DF283 20%,
@@ -52,11 +52,36 @@ body {
 		#A7DD0A 72%, #C9BF01 74%, #E49C03 76%, #F77610 78%, #FE5127 80%,
 		#FB3046 82%, #EC166A 84%, #D40690 86%, #BF01B5 88%, #8F06D5 90%,
 		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
+*/
+
+	background: #ccc;
 
 }
 
+h2 {
+	font-size: 24px;
+}
+
+p {
+	margin: 1em 0;
+}
+
+.parallax-panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	max-height: 100%;
+}
+
+.parallax-panel p {
+	font-size: 300px;
+}
+
 .panel {
+	position: relative;
 	float: left;
+	z-index: 10;
 }
 
 .contentpanel {
@@ -67,7 +92,7 @@ body {
 	border-radius: 30px;
 }
 
-#banner {
+nav {
 	position: fixed;
 	text-align: center;
 	background: #fff;
@@ -75,17 +100,19 @@ body {
 
 	top: 0;
 	left: 0;
+
+	z-index: 20;
 }
 
-#banner ul {
+nav ul {
 	line-height: 45px;
 }
 
-#banner .menu li {
+nav .menu li {
 	display: inline;
 }
 
-#banner .menu li a {
+nav .menu li a {
 	border-radius: 20px;
 	background: #f80;
 	padding: 4px 16px;
@@ -93,17 +120,34 @@ body {
 	text-decoration: none;
 }
 
-#banner .menu li a:hover {
+nav .menu li a:hover {
 	background: red;
 }
 
 #landen {
 	position: absolute;
-	right: 0px;
+	right: 8px;
 	top: 8px;
 	height: 45px;
 }
 
 #landen li {
 	display: inline;
+}
+
+#inschrijven p.error {
+	background: red;
+	padding: 12px 24px;
+	border-radius: 30px;
+	color: white;
+}
+
+#inschrijven input.error,
+#inschrijven label.error {
+	background-color: #ff98b3;
+}
+
+input[type=text],
+button {
+	font-size: 16px;
 }
