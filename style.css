@@ -120,6 +120,10 @@ nav .menu li a {
 	text-decoration: none;
 }
 
+nav .menu li a.visible {
+	background: green;
+}
+
 nav .menu li a:hover {
 	background: red;
 }

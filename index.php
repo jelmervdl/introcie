@@ -143,7 +143,13 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    </div>
 </div>
 <script>
-   $("nav .menu a").bind("click",function(event){
+   var links = $("nav .menu a");
+
+   var panels = $('.panel');
+
+   var parallax_panels = $('.parallax-panel');
+
+   links.bind("click",function(event){
       event.preventDefault();
       var target = $(this).attr("href");
       $("html, body").stop().animate({
@@ -151,28 +157,46 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
          scrollTop: $(target).offset().top
       }, 600);
    });
-
-   function resize()
+   
+   function update_panel_width()
    {
-      $('.panel').css('width', window.innerWidth);
+      panels.css('width', window.innerWidth);
 
-      $('body').css('width', window.innerWidth * $('.panel').length);
+      $('body').css('width', window.innerWidth * panels.length);
 
-      $('body').css('background-size', (window.innerWidth * $('.panel').length) + 'px 100%');
+      // $('body').css('background-size', (window.innerWidth * panels.length) + 'px 100%');
    }
 
-   var panels = $('.parallax-panel');
-
-   window.onscroll = function()
+   // Positioneer de panelen ten opzichte van de scroll-afstand
+   function update_parallax()
    {
-      panels.each(function(i) {
+      parallax_panels.each(function(i) {
          $(this).css('transform', 'translateX(' + (-window.scrollX / (3 * (panels.length - i))) + 'px)');
       });
    }
 
-   window.onresize = resize;
+   // Voeg de class 'visible' toe aan de link die verwijst naar het paneel dat het meest zichtbaar is
+   function update_scrollspy()
+   {
+      panels.each(function() {
+         var is_frontmost = Math.abs(this.offsetLeft - window.scrollX) < window.innerWidth / 2;
+         links.filter('[href=#' + this.id + ']').toggleClass('visible', is_frontmost);
+      });
+   }
 
-   resize();
+   window.onscroll = function() {
+      update_parallax();
+      
+      update_scrollspy();
+   };
+
+   window.onresize = function() {
+      update_panel_width();
+   };
+
+   update_scrollspy();
+
+   update_panel_width();
    
 </script>
 </body>
