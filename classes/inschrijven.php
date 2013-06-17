@@ -19,6 +19,7 @@ Class Inschrijven
 			'email',
 			'mededeling',
 			// 'betaald',
+			'rekeningnummer',
 			'akkosten',
 			'akvoorwaarden');
 
@@ -37,6 +38,9 @@ Class Inschrijven
 
 		if (!empty($input['thuisnummer']) && !ctype_digit($input['thuisnummer']))
 			return 'thuisnummer';
+
+		if (!ctype_digit($input['rekeningnummer']))
+			return 'rekeningnummer';
 
 		$data = array();
 

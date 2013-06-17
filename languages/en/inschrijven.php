@@ -9,7 +9,8 @@ $fields = array(
    'woonplaats',
    'telefoonnummer',
    'thuisnummer',
-   'email');
+   'email',
+   'rekeningnummer');
 
 $inschrijving_gesloten = date('j') > 20 && date('n') > 5;
 
