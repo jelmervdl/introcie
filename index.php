@@ -58,6 +58,7 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
 <html lang="en">
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
    <title>How I met my Future Friends</title>
 
    <link rel="stylesheet" type="text/css" href="reset.css">
@@ -98,12 +99,11 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
          <li><a href="#inschrijven"><?php echo $lang_menu['inschrijven'] ?></a></li>
          <li><a href="#gastenboek"><?php echo $lang_menu['gastenboek'] ?></a></li>
          <li><a href="#contact"><?php echo $lang_menu['contact'] ?></a></li>
-      </ul>
-      <ul id="landen">
+
          <?php if ($lang == 'nl'): ?>
-         <li><a href="index.php?lang=en"><img src="images/uk_small.gif" height="30" width="60" alt="English"></a></li>
+         <li class="land"><a href="index.php?lang=en"><img src="images/uk_small.gif" height="30" width="60" alt="English"></a></li>
          <?php else: ?>
-         <li><a href="index.php?lang=nl"><img src="images/nl_small.gif" height="30" width="60" alt="Nederlands"></a></li>
+         <li class="land"><a href="index.php?lang=nl"><img src="images/nl_small.gif" height="30" width="60" alt="Nederlands"></a></li>
          <?php endif ?>
       </ul>
    </nav>
@@ -146,7 +146,7 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    </div>
 </div>
 <script>
-   var links = $("nav .menu a");
+   var links = $("nav .menu a[href^=#]");
 
    var panels = $('.panel');
 

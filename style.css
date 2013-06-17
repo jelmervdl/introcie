@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	
 	color: #000000;
-	font: 16px/22px sans-serif;
+	font: 16px/24px sans-serif;
 	
 	background-repeat: repeat-y;
 	/*background-size: 100% 100%;*/
@@ -54,8 +54,7 @@ body {
 		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
 */
 
-	background: #ccc;
-
+	background: #addeff;
 }
 
 h2 {
@@ -83,8 +82,8 @@ p {
 .contentpanel {
 	margin: 61px auto 16px auto;
 	padding: 30px;
-	max-width: 800px;
-	background: #eee;
+	max-width: 740px;
+	background: #e1eef7;
 	border-radius: 30px;
 }
 
@@ -124,15 +123,18 @@ nav .menu li a:hover {
 	background: red;
 }
 
-#landen {
-	position: absolute;
-	right: 8px;
-	top: 8px;
-	height: 45px;
-}
+@media(min-width:800px) {
+	.land {
+		position: absolute;
+		right: 8px;
+		top: 8px;
+		height: 45px;
+	}
 
-#landen li {
-	display: inline;
+	nav .menu li.land a {
+		background-color: transparent;
+		padding: 0;
+	}
 }
 
 #inschrijven p.error {
@@ -150,4 +152,65 @@ nav .menu li a:hover {
 input[type=text],
 button {
 	font-size: 16px;
+}
+
+/* Media queries voor kleine schermpjes */
+
+@media(max-width:800px) {
+	/* Parallax-effect is toch niet zichtbaar */
+	.parallax-panel {
+		display: none;
+	}
+
+	/* Panelen gewoon onder elkaar, geen fancyness */
+	.panel {
+		clear: left;
+	}
+
+	/* Panelen zweven niet langer, ronde randjes is lelijk */
+	.contentpanel {
+		border-radius: 0;
+	}
+
+	/* Statische nav */
+	body {
+		margin-top: 192px;
+	}
+
+	nav {
+		position: absolute;
+		height: 192px;
+	}
+
+	nav .menu li a {
+		border-radius: 0;
+		float: left;
+		width: 50%;
+		height: 48px;
+		margin: -1px;
+		padding: 0;
+		text-indent: 12px;
+		border: 1px solid #bbb;
+		display: block;
+		text-align: left;
+		background: #ccc;
+	}
+
+	nav .menu li.land a img {
+		height:26px;
+		width:48px;
+	}
+
+	nav .menu li a.visible {
+		background: #ccc;
+	}
+
+	nav .menu li a:hover,
+	nav .menu li a:active {
+		background: #ddd;
+	}
+
+	form table td {
+		display: block;
+	}
 }
