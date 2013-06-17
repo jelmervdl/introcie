@@ -1,3 +1,9 @@
+@font-face
+{
+	font-family: friends;
+	src: url(images/friends.ttf);
+}
+
 body {
 	height: 100%;
 	margin: 0;
@@ -58,7 +64,7 @@ body {
 }
 
 h2 {
-	font-size: 24px;
+	font: 32px friends, sans-serif;
 }
 
 p {
@@ -149,7 +155,12 @@ nav .menu li a:hover {
 	background-color: #ff98b3;
 }
 
+#inschrijven textarea {
+	width: 100%;
+}
+
 input[type=text],
+textarea,
 button {
 	font-size: 16px;
 }
@@ -214,8 +225,7 @@ button {
 		display: block;
 	}
 
-	form table td input[type=text],
-	form table td textarea {
+	form table td input[type=text] {
 		width: 100%;
 	}
 }
