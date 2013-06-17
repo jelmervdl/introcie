@@ -101,6 +101,7 @@ p {
 .foto-commissie {
 	width: 100%;
 	height: auto;
+	border-radius: 15px;
 }
 
 .profiel {
@@ -113,6 +114,7 @@ p {
 	width: 120px;
 	float: left;
 	margin: 0 12px 0 0;
+	border-radius: 7px;
 }
 
 nav {
