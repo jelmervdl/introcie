@@ -98,14 +98,21 @@ p {
 	border-radius: 30px;
 }
 
-.commissie_foto{
-	height: 400px;
-	width: 600px;
+.foto-commissie {
+	width: 100%;
+	height: auto;
 }
-.hoofdje_foto{
-	height: 200px;
-	width: 200px;
 
+.profiel {
+	clear: both;
+	min-height: 120px;
+}
+
+.foto-hoofdje {
+	height: 120px;
+	width: 120px;
+	float: left;
+	margin: 0 12px 0 0;
 }
 
 nav {
