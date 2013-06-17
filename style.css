@@ -213,4 +213,9 @@ button {
 	form table td {
 		display: block;
 	}
+
+	form table td input[type=text],
+	form table td textarea {
+		width: 100%;
+	}
 }

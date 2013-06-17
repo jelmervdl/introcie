@@ -188,6 +188,10 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    }
 
    window.onscroll = function() {
+      // Geen reden om dit uit te voeren wanneer we klein zijn.
+      if (window.innerWidth < 800)
+         return;
+
       update_parallax();
       
       update_scrollspy();

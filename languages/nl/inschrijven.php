@@ -129,7 +129,7 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
          <td colspan="2">Mededelingen (allergiën, medicijnen, opmerkingen)</td>
       </tr>
       <tr>
-         <td colspan="2"><textarea name="mededeling"><?php if (isset($_POST['mededeling'])) echo htmlspecialchars($_POST['mededeling'], ENT_COMPAT, 'utf-8') ?></textarea></td>
+         <td colspan="2"><textarea rows="4" name="mededeling"><?php if (isset($_POST['mededeling'])) echo htmlspecialchars($_POST['mededeling'], ENT_COMPAT, 'utf-8') ?></textarea></td>
       </tr>
 
       <tr>
