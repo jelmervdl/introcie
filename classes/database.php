@@ -1,10 +1,13 @@
 <?php
+
+date_default_timezone_set('Europe/Amsterdam');
+
 class data
 {
 	public function connect(){
 		$db = "introcie";
 		$user = "introcie";
-		$host = "localhost";
+		$host = "127.0.0.1";
 		$password = "password";
 		
 		$connection = mysql_connect($host, $user, $password) or die(mysql_error());

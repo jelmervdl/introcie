@@ -3,7 +3,6 @@ session_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', true);
-date_default_timezone_set('Europe/Amsterdam');
 
 header('Cache-control: private'); // IE 6 FIX
 
@@ -46,8 +45,18 @@ $inschrijven = new inschrijven();
 $data->connect();
 
 $inschrijving = "";
-if (!empty($_POST)){
-    $inschrijving = $inschrijven->process($_POST);
+if (!empty($_POST))
+{
+   switch ($_POST['form'])
+   {
+      case 'inschrijving':
+         $inschrijving = $inschrijven->process($_POST);
+         break;
+
+      case 'gastenboek':
+         $gastenboek->post($_POST);
+         break;
+   }
 }
 
 // Vertaling van het menu
@@ -152,6 +161,22 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
 
    var parallax_panels = $('.parallax-panel');
 
+   /* jQuery plugins om gemakkelijk form elementen aan en uit te zetten */
+
+   jQuery.fn.disable = function() {
+      return this.each(function() {
+         this.disable = true;
+      });
+   };
+
+   jQuery.fn.enable = function() {
+      return this.each(function() {
+         this.disable = false;
+      });
+   };
+
+   /* Vang links in navigatie af zodat ze scrollen ipv springen */
+
    links.bind("click",function(event){
       event.preventDefault();
       var target = $(this).attr("href");
@@ -204,7 +229,60 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    update_panel_width();
    
    update_scrollspy();
-   
+
+   $('#gastenboek form').submit(function(e) {
+      e.preventDefault();
+      var form = this;
+
+      // Disable form elements
+      $(form).find('input,button').disable();
+
+      // Submit the data to the gastenboek page.
+      $.post('gastenboek.php?last_bericht_id=' + get_last_bericht_id(), $(this).serialize(), function(html) {
+         // Prepend message to message list
+         $('.gastenboek').prepend(html);
+         
+         // Re-enable form elements
+         $(form).find('input,button').enable();
+
+         // and clear data
+         $(form).find('textarea').val('');
+      });
+   });
+
+   function get_last_bericht_id()
+   {
+      try {
+         return $('.gastenboek-entry').first().get(0).id.match(/bericht-(\d+)/)[1];
+      } catch (e) {
+         return 0;
+      }
+   }
+
+   function get_oldest_bericht_id()
+   {
+      try {
+         return $('.gastenboek-entry').last().get(0).id.match(/bericht-(\d+)/)[1];
+      } catch (e) {
+         return 0;
+      }
+   }
+
+   function load_gastenboek()
+   {
+      $('.gastenboek-next-page-button').disable();
+
+      $.get('gastenboek.php?last_bericht_id=' + get_oldest_bericht_id(), function(html) {
+         $('.gastenboek').append(html);
+
+         $('.gastenboek-next-page-button').enable();
+      });
+   }
+
+   $('.gastenboek-next-page-button').click(load_gastenboek);
+
+   load_gastenboek();
+
 </script>
 </body>
 </html>

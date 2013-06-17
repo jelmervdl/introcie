@@ -67,6 +67,11 @@ h2 {
 	font: 32px friends, sans-serif;
 }
 
+h4 {
+	font-weight: bold;
+	border-bottom: 2px solid #ff9900;
+}
+
 p {
 	margin: 1em 0;
 }
@@ -163,6 +168,50 @@ input[type=text],
 textarea,
 button {
 	font-size: 16px;
+}
+
+.gastenboek-entry {
+	display: block;
+	padding: 12px;
+	border-radius: 15px;
+	background: #ccf;
+	margin: 6px 0;
+}
+
+.gastenboek-next-page-button {
+	width: 100%;
+	border-radius: 15px;
+	padding: 6px 0;
+	background: #ccc;
+	border: 1px solid #333;
+}
+
+form .gastenboek-naam,
+form .gastenboek-email {
+	display: block;
+	width: 50%;
+	float: left;
+}
+
+form .gastenboek-bericht {
+	display: block;
+	width: 100%;
+}
+
+#gastenboek form textarea,
+#gastenboek form input[type=text] {
+	width: 80%;
+	margin: 0;
+	padding: 1%;
+	border: 1px solid #333;
+}
+
+#gastenboek form textarea {
+	width:90%;
+}
+
+form label span {
+	display: block;
 }
 
 /* Media queries voor kleine schermpjes */
