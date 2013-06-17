@@ -1,16 +1,17 @@
 <?php
 
 $fields = array(
-   'voornaam',
-   'tussenvoegsel',
-   'achternaam',
-   'adres',
-   'postcode',
-   'woonplaats',
-   'telefoonnummer',
-   'thuisnummer',
-   'email',
-   'rekeningnummer');
+   'voornaam' => 'First name',
+   // 'tussenvoegsel' => 'insertion',
+   'achternaam' => 'Last name',
+   'adres' => 'Address',
+   'postcode' => 'Postal code',
+   'woonplaats' => 'City',
+   'telefoonnummer' => 'Phone number',
+   'thuisnummer' => 'Home phone number',
+   'email' => 'Email',
+   'rekeningnummer' => 'Account'
+);
 
 $inschrijving_gesloten = date('j') > 20 && date('n') > 5;
 
@@ -69,7 +70,7 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
 
 <?php else: ?>
 
-   <h2>Inschrijven Introkamp</h2>
+   <h2>Sign up for Introcamp</h2>
    <form method="POST" action="index.php#inschrijven">
    
    <?php if ($inschrijving): ?>
@@ -77,14 +78,14 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
    <?php endif ?>
    
    <table>
-   <?php foreach($fields as $field)
+   <?php foreach($fields as $field => $label)
    {
       printf('
          <tr>
             <td>%s</td>
             <td><input type="text" name="%s" value="%s" class="%s"></td>
          </tr>',
-            ucfirst($field),
+            $label,
             $field,
             isset($_POST[$field])
                ? htmlentities($_POST[$field], ENT_QUOTES, 'utf-8')
@@ -96,45 +97,45 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
    }
    ?>
       <tr>
-         <td>Opleiding</td>
+         <td>Study</td>
          <td><?php echo $html_select('opleiding', array(
-            'KI' => 'Kunstmatige Intelligentie',
-            'INF' => 'Informatica',
-            'Anders' => 'Anders')) ?></td>
+            'KI' => 'Artificial Intelligence',
+            'INF' => 'Computer Science',
+            'Anders' => 'Other')) ?></td>
       </tr>
       
       <tr>
-         <td>Soort deelnemer</td>
+         <td>Participant type</td>
          <td><?php echo $html_select('deelnemer', array(
-            'sjaars' => 'Eerstejaars',
+            'sjaars' => 'First year student',
             'ouderejaars' => 'Ouderejaars',
             'mentor' => 'Mentor')) ?></td>
       </tr>
       
       <tr>
          <td></td>
-         <td><?php echo $html_checkbox('vega', 'ja', 'Ik ben vegetariër') ?></td>
+         <td><?php echo $html_checkbox('vega', 'ja', 'I am a vegetarian') ?></td>
       </tr>
 
       <tr>
          <td></td>
-         <td><?php echo $html_checkbox('akvoorwaarden', 'ja', 'Ik ga akkoord met de voorwaarden') ?></td>
+         <td><?php echo $html_checkbox('akvoorwaarden', 'ja', 'I agree to the terms') ?></td>
       </tr>
 
       <tr>
          <td></td>
-         <td><?php echo $html_checkbox('akkosten', 'ja', 'Ik ga akkoord met de kosten &euro; XX.00') ?></td>
+         <td><?php echo $html_checkbox('akkosten', 'ja', 'I agree to the cost of &euro; XX.00') ?></td>
       </tr>
    
       <tr>
-         <td colspan="2">Mededelingen (allergiën, medicijnen, opmerkingen)</td>
+         <td colspan="2">Comments (allergies, medication, etc.)</td>
       </tr>
       <tr>
          <td colspan="2"><textarea rows="4" name="mededeling"><?php if (isset($_POST['mededeling'])) echo htmlspecialchars($_POST['mededeling'], ENT_COMPAT, 'utf-8') ?></textarea></td>
       </tr>
 
       <tr>
-         <td colspan="2"><button type="submit">Inschrijven</button></td>
+         <td colspan="2"><button type="submit">Sign up</button></td>
       </tr>
    </table>
    </form>
