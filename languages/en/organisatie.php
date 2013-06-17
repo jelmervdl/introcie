@@ -1,4 +1,28 @@
-<h2>Organization!</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce ullamcorper dapibus nisl. In id dui. Nunc pulvinar erat et nibh. Integer sollicitudin. Quisque faucibus. Sed eleifend sapien sed nunc. Pellentesque congue leo et felis eleifend scelerisque. In a mauris ultricies diam tincidunt pharetra. Etiam venenatis facilisis orci. Donec quam dui, mattis eu, posuere a, tristique ut, pede. Sed quis nibh. Praesent augue metus, dapibus ac, consectetuer a, convallis eu, elit. Etiam et dui.</p>
-<p>Cras tempus, tellus quis facilisis dignissim, lorem libero rhoncus dolor, in venenatis neque arcu a mauris. Vivamus arcu quam, egestas sed, tempor quis, imperdiet sit amet, justo. Aliquam sem ipsum, sagittis id, imperdiet eu, scelerisque non, lorem. Cras aliquet, augue gravida iaculis tincidunt, elit sapien egestas libero, in dictum ipsum velit vel orci. Etiam mi nulla, lacinia nec, pretium vitae, blandit vel, tortor. Praesent eget libero. In accumsan laoreet lacus. Vivamus enim.</p>
-<p>Vestibulum vitae metus sed purus elementum malesuada. Aliquam feugiat metus ut orci. Etiam scelerisque lacus eu tellus. Praesent neque est, placerat in, rhoncus nec, tempor eleifend, sem. Mauris quis leo ut urna porttitor auctor. Nulla a mi. Nulla risus turpis, rhoncus auctor, tempus eu, molestie rhoncus, metus.</p>
+<h2>Cover</h2>
+<p>Cover is the studies association for Artificial Intelligence and Computing Science. As studies association we organize loads of activities related to our fields of study, like visits to different companies to have a peek at how things go when you get a job after your studies, or lectures where some external speaker tells us about his experiences in our field of work. Apart from these activities we, of course, also organize lots of more social events, so you can get to know your fellow students in another way than you do at the lectures. Some examples are our monthly drinks nights or gaming nights and lots of other original activities! Finally we also offer our members a discount on their books.</p>
+<p>Cover also has her own room (the SLACK) at the university. In between classes you are always welcome to drop by and have some food or drinks, maybe play some video games or do whatever you want with other fellow students. Also when you are working on assignments you are always welcome to ask some of the senior members for help when you get stuck. We hope to see you frequently in the SLACK!</p>
+<h2>De Committee</h2>
+<img src="images/hoofdjes/Commissie.png" class="commissie_foto"/>       
+<p>Hi, my name is Annemarie and I'm 21 years old. I'm a third year AI student. This year I had a lot of fun organizing a super awesome introductory camp for you, together with the rest of the IntroCie. I hope you will have a great time during this weekend. I'm looking forward to it! See you then!</p>
+<img src="images/hoofdjes/Annemarie.png" class="hoofdje_foto"/>
+
+<p>Hey there! I am Hayo, 20 years old and if you see me during the introduction camp, I'll be in my third year Artificial Intelligence. Before I was in this committee, I was a member of another committee organizing an awsome party for lots of student associations. I plan to make this introduction camp even more awesome!</p>
+<img src="images/hoofdjes/Hayo.png" class="hoofdje_foto" />
+
+<p>Hi! My name is Marten and I'm 23 years old. At the moment I'm a fourth year AI student (fifth in the upcoming year) en started my masters in February. This will be the second time I organize our awesome introductory camp and I hope you are looking forward to it as much as I am! </p>
+<img src="images/hoofdjes/Marten.png" class="hoofdje_foto" />
+
+<p>Hello, I am Lianne, 20 years old and this year I will start with the study Human Technology at the Hanze. After studying AI for 1,5 years, I sadly decided to stop. Of course this decision didn't hold me back from organizing an brilliant introductory camp for you! I hope to see you all at the end of August.</p>
+<img src="images/hoofdjes/Lianne.png" class="hoofdje_foto" />
+
+<p>Hey, I'm Steven. I'm 22 years old and I'm a 4th-year student of Artificial Intelligence. We - being the IntroCie (introduction committee) - have been to many such weekends or even organised them! Every single time has been a fun and enjoyable weekend. I hope I will be seeing all of you at the introductory camp!</p>
+<img src="images/hoofdjes/Steven.png" class="hoofdje_foto" />
+
+<p>Hey, my Name is Marijn, I am 20 years old and a firstyears student AI, upcoming year I'm going to study Computer Science. As a first years student it is extremely fun at Cover and that is one of the reasons why I decided to help organise the camp :)</p>
+<img src="images/hoofdjes/Marijn.png" class="hoofdje_foto" />
+
+<p>Ik ben Diederick en een beetje dom</p>
+<img src="images/hoofdjes/Diederick.png" class="hoofdje_foto" />
+
+<p>Ik ben Floris en een beetje dom</p>
+<img src="images/hoofdjes/Floris.png" class="hoofdje_foto" />

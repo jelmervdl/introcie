@@ -98,6 +98,16 @@ p {
 	border-radius: 30px;
 }
 
+.commissie_foto{
+	height: 400px;
+	width: 600px;
+}
+.hoofdje_foto{
+	height: 200px;
+	width: 200px;
+
+}
+
 nav {
 	position: fixed;
 	text-align: center;
@@ -154,6 +164,7 @@ nav .menu li a:hover {
 	border-radius: 30px;
 	color: white;
 }
+
 
 #inschrijven input.error,
 #inschrijven label.error {
