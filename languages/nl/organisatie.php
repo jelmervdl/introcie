@@ -42,5 +42,5 @@
 
 <section class="profiel">
 	<img src="images/hoofdjes/Floris.png" class="foto-hoofdje">
-	<p>Ik ben Floris en een beetje dom</p>
+	<p>Hey, ik ben Floris en ik ben 20 jaar oud. Komend jaar ben ik tweedejaars Informatica student. Als IntroCie van Cover hebbben wij de taak om een super awesome introkamp organiseren, en dat is precies wat we gaan doen! Hopelijk zie ik jullie allemaal op het introkamp!</p>
 </section>
