@@ -60,7 +60,7 @@ body {
 		#9106D3 92%, #6B16EC 94%, #472FFA 96%, #2850FE 98%, #1175F7);
 */
 
-	background: #addeff;
+	background: #5494DB;
 }
 
 h2 {
@@ -94,7 +94,7 @@ p {
 	margin: 61px auto 16px auto;
 	padding: 30px;
 	max-width: 740px;
-	background: #e1eef7;
+	background: #B6E4FC;
 	border-radius: 30px;
 }
 
@@ -120,13 +120,18 @@ p {
 nav {
 	position: fixed;
 	text-align: center;
-	background: #fff;
 	width: 100%;
-
 	top: 0;
 	left: 0;
+	padding: 4px 0;
 
 	z-index: 20;
+	transition: all 250ms;
+}
+
+.scrolled nav {
+	background: #F0C05C;
+	box-shadow: 0 0 10px #333;
 }
 
 nav ul {
@@ -137,27 +142,28 @@ nav .menu li {
 	display: inline;
 }
 
-nav .menu li a {
+nav .menu li a,
+nav .menu li a:visited {
 	border-radius: 20px;
-	background: #f80;
-	padding: 4px 16px;
-	color: #1500FF;
+	background: #080204;
+	padding: 8px 20px;
+	color: #F0C05C;
 	text-decoration: none;
 }
 
 nav .menu li a.visible {
-	background: green;
+	background: #252F3B;
 }
 
 nav .menu li a:hover {
-	background: red;
+	background: #252F3B;
 }
 
 @media(min-width:800px) {
 	.land {
 		position: absolute;
 		right: 8px;
-		top: 8px;
+		top: 12px;
 		height: 45px;
 	}
 
@@ -194,7 +200,7 @@ button {
 	display: block;
 	padding: 12px;
 	border-radius: 15px;
-	background: #ccf;
+	background: #5494DB;
 	margin: 6px 0;
 }
 
@@ -202,8 +208,10 @@ button {
 	width: 100%;
 	border-radius: 15px;
 	padding: 6px 0;
-	background: #ccc;
-	border: 1px solid #333;
+	background: #080204;
+	color: #F0C05C;
+	border: none;
+	cursor: pointer;
 }
 
 form .gastenboek-naam,
@@ -270,10 +278,9 @@ form label span {
 		margin: -1px;
 		padding: 0;
 		text-indent: 12px;
-		border: 1px solid #bbb;
+		border: 1px solid #000;
 		display: block;
 		text-align: left;
-		background: #ccc;
 	}
 
 	nav .menu li.land a img {
@@ -282,12 +289,12 @@ form label span {
 	}
 
 	nav .menu li a.visible {
-		background: #ccc;
+		
 	}
 
 	nav .menu li a:hover,
 	nav .menu li a:active {
-		background: #ddd;
+		
 	}
 
 	form table td {

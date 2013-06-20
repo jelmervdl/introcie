@@ -220,6 +220,8 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
       update_parallax();
       
       update_scrollspy();
+      
+      $(document.body).toggleClass('scrolled', window.scrollY > 8);
    };
 
    window.onresize = function() {
