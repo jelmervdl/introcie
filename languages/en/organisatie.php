@@ -42,5 +42,5 @@
 
 <section class="profiel">
 	<img src="images/hoofdjes/Floris.png" class="foto-hoofdje">
-	<p>Ik ben Floris en een beetje dom</p>
+	<p>Hey, my name is Floris and I'm 20 years old. Upcoming year I will be a second year Computing Science student. We, being part of the IntroCie, have the task to organise a super awesome introductory camp, amd that is exactly what we will do! I hope to see all of you during the introductory camp!</p>
 </section>
