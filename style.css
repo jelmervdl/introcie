@@ -146,7 +146,7 @@ nav .menu li a,
 nav .menu li a:visited {
 	border-radius: 20px;
 	background: #080204;
-	padding: 8px 20px;
+	padding: 8px 16px;
 	color: #F0C05C;
 	text-decoration: none;
 }
@@ -240,6 +240,11 @@ form .gastenboek-bericht {
 
 form label span {
 	display: block;
+}
+
+.contentpanel ul {
+	list-style: circle;
+	padding-left: 1.5em;
 }
 
 /* Media queries voor kleine schermpjes */

@@ -105,6 +105,7 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
          <li><a href="#kamp"><?php echo $lang_menu['kamp'] ?></a></li>   
          <li><a href="#organisatie"><?php echo $lang_menu['organisatie'] ?></a></li>  
          <li><a href="#thema"><?php echo $lang_menu['thema'] ?></a></li>
+         <li><a href="#paklijst"><?php echo $lang_menu['paklijst'] ?></a></li>
          <li><a href="#inschrijven"><?php echo $lang_menu['inschrijven'] ?></a></li>
          <li><a href="#gastenboek"><?php echo $lang_menu['gastenboek'] ?></a></li>
          <li><a href="#contact"><?php echo $lang_menu['contact'] ?></a></li>
@@ -136,6 +137,11 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    <div id="thema" class="panel">
       <div class="contentpanel">
          <?php echo include_translation('thema.php') ?>
+      </div>
+   </div>
+   <div id="paklijst" class="panel">
+      <div class="contentpanel">
+         <?php echo include_translation('paklijst.php') ?>
       </div>
    </div>
    <div id="inschrijven" class="panel">
