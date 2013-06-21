@@ -1,17 +1,59 @@
 <h2>Packing List!</h2>
-<p>Stuff that you definitely don't want to forget to bring.</p>
+<p>To make sure that you have exactly what you need with you during this camp, we have this wonderful packing list for you! If you checked everything off this list, you are ready to go :)</p>
+
+<h4>Sleep</h4>
 <ul>
-	<li>Enough clean clothes and underwear for a weekend</li>
-	<li>Plate, cutlery and a cup</li>
-	<li>Clothing and shoes which may become dirty</li>
+	<li>Air mattrass</li>
+	<li>Sleeping bag</li>
+	<li>Teddy bear</li>
+	<li>Pajamas</li>
+	<li>Pillowcase</li>
+	<li>Fitted sheet</li>
+</ul>
+
+<h4>Clothes</h4>
+<ul>
+	<li>Clothes for getting dirty</li>
+	<li>Long pants</li>
+	<li>Short pants</li>
 	<li>Swimwear</li>
-	<li>Towels and a kitchen towel</li>
-	<li>Toiletries</li>
-	<li>Medication (if necessary)</li>
-	<li>Rainwear and an umbrella</li>
-	<li>Lunch for the first day</li>
+	<li>Old shoes</li>
+	<li>Socks</li>
+	<li>Underwear</li>
+	<li>T-shirts</li>
+	<li>Warm jacket/hoodie</li>
+	<li>Garbage bag for dirty clothes</li>
+	<li>Ballpit ball</li>
+</ul>
+
+<h4>Personal Care</h4>
+<ul>
+	<li>Hand towel</li>
+	<li>Toothbrush</li>
+	<li>Toothpaste</li>
+	<li>Care for braces (if neccessary)</li>
+	<li>Soap/Shampoo</li>
+	<li>Washcloth</li>
+	<li>Deodorant</li>
+	<li>Anti-sunburn creme</li>
+	<li>Medicines (if neccessary)</li>
+	<li>Manstrual pad or the like (if neccessary)</li>
+	<li>Hairbrush (if neccessary)</li>
+	<li>Ballpit ball</li>
+</ul>
+
+<h4>Other</h4>
+<ul>
+	<li>Tea-towel</li>
 	<li>Flashlight</li>
-	<li>Sleeping bag, pillowcase and a fitted sheet</li>
-	<li>Pillow</li>
-	<li>Your best mood</li>
+	<li>Pen and paper</li>
+	<li>Phone and charger</li>
+	<li>Something to do during breaks, like a book or games</li>
+	<li>Plate, cup and utensils or spork. (nametag is handy!)</li>
+	<li>Ballpit ball</li>
+</ul>
+
+<h4>Important</h4>
+<ul>
+	<li>Ballpit ball</li>
 </ul>
