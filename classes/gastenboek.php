@@ -21,9 +21,9 @@ class Gastenboek
 		return $this->render(mysql_query($query));
 	}
 
-	public function viewTill($bericht_id)
+	public function viewTill($bericht_id, $aantal)
 	{
-		$query = sprintf("SELECT * FROM `gastenboek` WHERE bericht_id > %d ORDER BY `bericht_id` DESC", $bericht_id);
+		$query = sprintf("SELECT * FROM `gastenboek` WHERE bericht_id > %d ORDER BY `bericht_id` DESC LIMIT %d", $bericht_id, $aantal);
 		return $this->render(mysql_query($query));
 	}
 
