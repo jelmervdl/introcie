@@ -11,7 +11,7 @@ $gastenboek = new Gastenboek($database);
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	$gastenboek->post($_POST);
-	echo $gastenboek->viewTill($_GET['last_bericht_id']);
+	echo $gastenboek->viewTill($_GET['last_bericht_id'], 15);
 }
 else
 {
