@@ -83,18 +83,19 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    <!-- parallax layers -->
 
    <div class="parallax-panel">
-      <img style="position:absolute; width: 400px; top: 40px; left: 60px" src="images/foto-1.jpg">
-      <img style="position:absolute; width: 200px; top: 420px; left: 860px" src="images/foto-1.jpg">
+      <img class="asset-head" style="left:900px" src="images/dexter.png">
    </div>
 
    <div class="parallax-panel">
-      <img style="position:absolute; width: 400px; top: 460px; left: 270px" src="images/foto-1.jpg">
-      <img style="position:absolute; width: 600px; top: 620px; left: 1260px" src="images/foto-1.jpg">
+      <img class="asset-head" style="left:-200px" src="images/house.png">
    </div>
 
    <div class="parallax-panel">
-      <img style="position:absolute; width: 300px; top: -20px; left: 10px" src="images/foto-1.jpg">
-      <img style="position:absolute; width: 800px; top: 780px; left: 460px" src="images/foto-1.jpg">
+      <img class="asset-head" style="left:400px" src="images/bender.png">
+   </div>
+
+   <div class="parallax-panel">
+      <img class="asset-head" style="left:300px" src="images/bean.png">
    </div>
 
    <!-- navigation -->
@@ -205,7 +206,7 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    function update_parallax()
    {
       parallax_panels.each(function(i) {
-         $(this).css('transform', 'translateX(' + (-window.scrollX / (3 * (panels.length - i))) + 'px)');
+         $(this).css('transform', 'translateX(' + (-window.scrollX / (2 * (panels.length - i))) + 'px)');
       });
    }
 
