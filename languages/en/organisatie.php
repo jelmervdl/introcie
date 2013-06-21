@@ -2,7 +2,7 @@
 <p>Cover is the studies association for Artificial Intelligence and Computing Science. As studies association we organize loads of activities related to our fields of study, like visits to different companies to have a peek at how things go when you get a job after your studies, or lectures where some external speaker tells us about his experiences in our field of work. Apart from these activities we, of course, also organize lots of more social events, so you can get to know your fellow students in another way than you do at the lectures. Some examples are our monthly drinks nights or gaming nights and lots of other original activities! Finally we also offer our members a discount on their books.</p>
 <p>Cover also has her own room (the SLACK) at the university. In between classes you are always welcome to drop by and have some food or drinks, maybe play some video games or do whatever you want with other fellow students. Also when you are working on assignments you are always welcome to ask some of the senior members for help when you get stuck. We hope to see you frequently in the SLACK!</p>
 
-<h2>De Committee</h2>
+<h2>The Committee</h2>
 <img src="images/hoofdjes/Commissie.png" class="foto-commissie">
 
 <section class="profiel">
