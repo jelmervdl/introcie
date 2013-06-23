@@ -88,6 +88,7 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
 
    <div class="parallax-panel">
       <img class="asset-head" style="left:-200px" src="images/house.png">
+      <img class="asset-head" style="left:1400px" src="images/stark.png">
    </div>
 
    <div class="parallax-panel">
