@@ -37,10 +37,10 @@
 
 <section class="profiel">
 	<img src="images/hoofdjes/Diederick.png" class="foto-hoofdje">
-	<p>Ik ben Diederick en een beetje dom</p>
+	<p>Hoi! Ik ben Diederick, 22 jaar oud, en komend jaar 5ejaars student KI. Ik vind het introkamp altijd een van de leukste activiteiten van het jaar, en heb het daarom ook al een keer eerder met veel plezier georganiseerd. Ik heb er dus ook veel vertrouwen in dat het deze keer weer zo geweldig wordt!</p>
 </section>
 
 <section class="profiel">
 	<img src="images/hoofdjes/Floris.png" class="foto-hoofdje">
-	<p>Hey! I'm Diederick, I'm 22 years old, and in the coming year I'll be a 5th year student of AI. In my opinion the Introductory camp is one of the most fun activities of the year, which is why this is my second time organising it. And I'm utterly convinced that this time will be just as awesome!</p>
+	<p>Hey, ik ben Floris en ik ben 20 jaar oud. Komend jaar ben ik tweedejaars Informatica student. Als IntroCie van Cover hebbben wij de taak om een super awesome introkamp organiseren, en dat is precies wat we gaan doen! Hopelijk zie ik jullie allemaal op het introkamp!</p>
 </section>
