@@ -104,6 +104,10 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
       <img class="asset-head" style="height: 40%; left:2800px" src="images/tennant.png">
    </div>
 
+   <div class="parallax-panel">
+      <img class="asset-flying" style="left: 1500px" src="images/jetsons.png">
+   </div>
+
    <!-- navigation -->
    
    <nav>

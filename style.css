@@ -254,6 +254,12 @@ form label span {
 	bottom: 0;
 }
 
+.asset-flying {
+	position: absolute;
+	height: 50%;
+	top: 0;
+}
+
 /* Media queries voor kleine schermpjes */
 
 @media(max-width:800px) {
