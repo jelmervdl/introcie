@@ -53,20 +53,20 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
 
 <?php if ($inschrijving == "True"): ?>
 
-   <h2>Gefeliciteerd!</h2>
-   <p>Je hebt je succesvol ingeschreven voor het kamp. We hebben je zojuist een e-mail gestuurd met daarin al je ingevulde gegevens en aanvullende informatie.</p>
-   <p>We willen je vragen om alle gegevens te controleren en als er toch een fout in zit dit door te geven aan <a href="mailto:introcie@svcover.nl">de IntroCie</a>.</p>
+   <h2>Congratulations!</h2>
+   <p>You have succesfully signed up for the camp. If correct, you have received a confirmation email with your information.</p>
+   <p>We ask you to check this information and if you find any incorrect details, please send an email to <a href="mailto:introcie@svcover.nl">the IntroCie</a>.</p>
 
 <?php elseif ($inschrijving == "Error"): ?>
 
-   <h2>Inschrijven Introkamp</h2>
-   <p>Er is iets mis met de website. Neem alsjeblieft zo snel mogelijk contact op met <a href="mailto:introcie@svcover.nl">de IntroCie</a>.</p>
+   <h2>Sign up for Introcamp</h2>
+   <p>An error has occured. Please inform <a href="mailto:introcie@svcover.nl">the IntroCie</a> as soon as possible so we can fix this. Thank you!</p>
    <pre><?php echo mysql_error() ?></pre>
 
 <?php elseif ($inschrijving_gesloten): ?>
 
-   <h2>Inschrijven Introkamp</h2>
-   <p>De inschrijvingen voor het kamp zijn helaas gesloten. Mocht je toch nog meewillen, <a href="mailto:introcie@svcover.nl">mail</a> de commissie om te zien of er iets te regelen is.</p>
+   <h2>Sign up for Introcamp</h2>
+   <p>Unfortunately, it is no longer possible to sign up for the camp. Please send an email to <a href="mailto:introcie@svcover.nl">the IntroCie</a> to check whether it is possible to arrange something.</p>
 
 <?php else: ?>
 
@@ -74,7 +74,7 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
    <form method="POST" action="index.php#inschrijven">
    
    <?php if ($inschrijving): ?>
-   <p class="error">Je hebt een fout gemaakt bij het invullen van het formulier.</p>
+   <p class="error">You have made an error in the form.</p>
    <?php endif ?>
    
    <table>
