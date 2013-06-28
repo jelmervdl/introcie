@@ -38,6 +38,16 @@ function include_translation($file, array $variables = array())
    return ob_get_clean();
 }
 
+function inschrijving_geopend()
+{
+   return false;
+}
+
+function inschrijving_gesloten()
+{
+   return date('j') > 20 && date('n') > 7;
+}
+
 /* Verbind met de database voor inschrijvingen (en gastenboek later) */
 $data = new data();
 $inschrijven = new inschrijven();
@@ -50,7 +60,8 @@ if (!empty($_POST))
    switch ($_POST['form'])
    {
       case 'inschrijving':
-         $inschrijving = $inschrijven->process($_POST);
+         if (inschrijving_geopend() && !inschrijving_gesloten())
+            $inschrijving = $inschrijven->process($_POST);
          break;
 
       case 'gastenboek':

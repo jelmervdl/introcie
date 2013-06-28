@@ -12,8 +12,6 @@ $fields = array(
    'email',
    'rekeningnummer');
 
-$inschrijving_gesloten = date('j') > 20 && date('n') > 5;
-
 $html_select = function($name, array $options) use ($inschrijving)
 {
    $html_options = array();
@@ -62,10 +60,15 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
    <p>Er is iets mis met de website. Neem alsjeblieft zo snel mogelijk contact op met <a href="mailto:introcie@svcover.nl">de IntroCie</a>.</p>
    <pre><?php echo mysql_error() ?></pre>
 
-<?php elseif ($inschrijving_gesloten): ?>
+<?php elseif (inschrijving_gesloten()): ?>
 
    <h2>Inschrijven Introkamp</h2>
    <p>De inschrijvingen voor het kamp zijn helaas gesloten. Mocht je toch nog meewillen, <a href="mailto:introcie@svcover.nl">mail</a> de commissie om te zien of er iets te regelen is.</p>
+
+<?php elseif (!inschrijving_geopend()): ?>
+
+   <h2>Inschrijven Introkamp</h2>
+   <p>De inschrijvingen voor het kamp gaan binnenkort open.</p>
 
 <?php else: ?>
 

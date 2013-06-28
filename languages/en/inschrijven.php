@@ -13,8 +13,6 @@ $fields = array(
    'rekeningnummer' => 'Account'
 );
 
-$inschrijving_gesloten = date('j') > 20 && date('n') > 5;
-
 $html_select = function($name, array $options) use ($inschrijving)
 {
    $html_options = array();
@@ -63,10 +61,15 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
    <p>An error has occured. Please inform <a href="mailto:introcie@svcover.nl">the IntroCie</a> as soon as possible so we can fix this. Thank you!</p>
    <pre><?php echo mysql_error() ?></pre>
 
-<?php elseif ($inschrijving_gesloten): ?>
+<?php elseif (inschrijving_gesloten()): ?>
 
    <h2>Sign up for Introcamp</h2>
    <p>Unfortunately, it is no longer possible to sign up for the camp. Please send an email to <a href="mailto:introcie@svcover.nl">the IntroCie</a> to check whether it is possible to arrange something.</p>
+
+<?php elseif (!inschrijving_geopend()): ?>
+
+   <h2>Sign up for Introcamp</h2>
+   <p>Soon you will be able to sign up for the camp.</p>
 
 <?php else: ?>
 
