@@ -160,7 +160,7 @@ nav .menu li a:hover {
 	background: #252F3B;
 }
 
-@media(min-width:800px) {
+@media(min-width:1000px) {
 	.land {
 		position: absolute;
 		right: 8px;
@@ -262,7 +262,7 @@ form label span {
 
 /* Media queries voor kleine schermpjes */
 
-@media(max-width:800px) {
+@media(max-width:1000px) {
 	/* Parallax-effect is toch niet zichtbaar */
 	.parallax-panel {
 		display: none;
