@@ -16,6 +16,11 @@
 		<textarea name="bericht"></textarea>
 	</label>
 
+	<label class="gastenboek-captcha">
+		<span>De kleur van gras</span>
+		<input type="text" name="captcha">
+	</label>
+
 	<button type="submit">Plaats bericht</button>
 </form>
 

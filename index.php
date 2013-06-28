@@ -55,20 +55,9 @@ $inschrijven = new inschrijven();
 $data->connect();
 
 $inschrijving = "";
-if (!empty($_POST))
-{
-   switch ($_POST['form'])
-   {
-      case 'inschrijving':
-         if (inschrijving_geopend() && !inschrijving_gesloten())
-            $inschrijving = $inschrijven->process($_POST);
-         break;
 
-      case 'gastenboek':
-         $gastenboek->post($_POST);
-         break;
-   }
-}
+if (!empty($_POST) && inschrijving_geopend() && !inschrijving_gesloten())
+   $inschrijving = $inschrijven->process($_POST);
 
 // Vertaling van het menu
 $lang_menu = include sprintf('languages/%s/menu.php', $lang);
@@ -288,6 +277,9 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
       // Disable form elements
       $(form).find('input,button').disable();
 
+      // fill in the captcha
+      $(form).find('input[name=captcha]').val('groen');
+
       // Submit the data to the gastenboek page.
       $.post('gastenboek.php?last_bericht_id=' + get_last_bericht_id(), $(this).serialize(), function(html) {
          // Prepend message to message list
@@ -333,6 +325,8 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    $('.gastenboek-next-page-button').click(load_gastenboek);
 
    load_gastenboek();
+
+   $('.gastenboek-captcha').hide();
 
 </script>
 </body>
