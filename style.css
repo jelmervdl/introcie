@@ -68,7 +68,7 @@ h2 {
 	font: 32px friends, sans-serif;
 }
 
-h4 {
+h3, h4 {
 	font-weight: bold;
 	border-bottom: 2px solid #ff9900;
 }

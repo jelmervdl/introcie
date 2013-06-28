@@ -122,7 +122,7 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
 
       <tr>
          <td></td>
-         <td><?php echo $html_checkbox('akvoorwaarden', 'ja', 'I agree to the terms') ?></td>
+         <td><?php echo $html_checkbox('akvoorwaarden', 'ja', 'I agree to <a href="#voorwaarden">the terms</a>') ?></td>
       </tr>
 
       <tr>
@@ -141,5 +141,9 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
          <td colspan="2"><button type="submit">Sign up</button></td>
       </tr>
    </table>
+   <div id="voorwaarden">
+      <h2>Terms</h2>
+      <p>Todo</p>
+   </div>
    </form>
 <?php endif ?>

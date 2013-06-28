@@ -45,7 +45,7 @@ function inschrijving_geopend()
 
 function inschrijving_gesloten()
 {
-   return date('j') > 20 && date('n') > 7;
+   return date('j') > 16 && date('n') > 8;
 }
 
 /* Verbind met de database voor inschrijvingen (en gastenboek later) */
@@ -208,11 +208,32 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    links.bind("click",function(event){
       event.preventDefault();
       var target = $(this).attr("href");
+      
+      // Soort-van het normale gedrag van de browser history behouden
+      if (window.history.pushState)
+         window.history.pushState({target: target}, "", target);
+
       $("html, body").stop().animate({
          scrollLeft: $(target).offset().left,
          scrollTop: $(target).offset().top
       }, 600);
    });
+
+   // Vang link naar voorwaarden op om deze speciaal te behandelen.
+   $('a[href=#voorwaarden]').click(function(event) {
+      event.preventDefault();
+
+      var target = $('#voorwaarden')
+
+      target.show();
+
+      $("html, body").stop().animate({
+         scrollTop: target.offset().top - 100
+      }, 600);
+   });
+
+   // maar verberg de voorwaarden standaard (met JS, zodat niet-js ze nog wel ziet)
+   $('#voorwaarden').hide();
    
    function update_panel_width()
    {
