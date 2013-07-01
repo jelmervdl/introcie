@@ -73,6 +73,11 @@ h3, h4 {
 	border-bottom: 2px solid #ff9900;
 }
 
+#voorwaarden h3,
+#voorwaarden h4 {
+	border: none;
+}
+
 p {
 	margin: 1em 0;
 }
@@ -244,8 +249,52 @@ form label span {
 }
 
 .contentpanel ul {
-	list-style: circle;
+	list-style: disc;
 	padding-left: 1.5em;
+}
+
+.contentpanel ul ul {
+	list-style: circle;
+}
+
+#voorwaarden {
+	counter-reset: section;
+}
+
+#voorwaarden h4 {
+	counter-increment: section;
+}
+
+#voorwaarden > ul {
+	counter-reset: subsection;
+	list-style: none;
+}
+
+#voorwaarden ul {
+	padding-left: 40px;
+}
+
+#voorwaarden li:before {
+	display: inline-block;
+	margin-left: -40px;
+	width: 40px;
+	text-align: left;
+	font-style: italic;
+}
+
+#voorwaarden > ul > li:before {
+	counter-increment: subsection;
+	content: counter(section) "." counter(subsection);
+}
+
+#voorwaarden > ul > ul {
+	counter-reset: subsubsection;
+	list-style: none;
+}
+
+#voorwaarden > ul > ul > li:before {
+	counter-increment: subsubsection;
+	content: counter(section) "." counter(subsection) "." counter(subsubsection);
 }
 
 .asset-head {
