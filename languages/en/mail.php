@@ -1,19 +1,19 @@
 <html>
 	<head>
-		<title>Inschrijving Introkamp Cover</title>
+		<title>Sign up Introductioncamp Cover</title>
 	</head>
 	<body>
-		Beste <?php echo $naam ?>, <br />
-		Je hebt je zojuist ingeschreven voor het introkamp van studievereniging Cover, daarom hierbij nog een laatste controle van de gegevens en wat aanvullende informatie.<br /><br />
-		De door jou ingevulde gegevens:<br />
+		Dear <?php echo $naam ?>, <br />
+		You just signed up for the introductioncamp of study association Cover, in this email the last check for all you data and some extra info.<br /><br />
+		Your information:<br />
 		<table>
 			<?php echo $table ?>
 		</table><br />
-		Klopt er iets niet? Geef het even door aan de IntroCie (reply op dit mailtje met de correcte informatie is voldoende).<br /><br/>
+		Something not right? Tell the Introduction commission(reply on this mail with correct information is enough)<br /><br/>
 
-		Het kamp vindt plaats van 31 augustus tot en met 2 september 2012, de 31e zal het kamp direct na de facultaire introductiedag beginnen en we zullen op 2 augustus in de loop van de middag terug zijn in Groningen. Het vervoer hebben wij geregeld. Op de heenreis vertrekken we vanaf de Bernoulliborg en na de terugreis zullen we afgezet worden op het centraal station in Groningen. Let dus op waar je je fiets neerzet. Voor de overige informatie verwijzen we je graag door naar de website.<br /><br />
+		The camp will take place in the weekend of 30 August to 1 September 2013, on the 30th of August the camp will start directly after the general introduction and we will be back on the 1st of September in the Afternoon(around 16:00) We arranged the bus travel from/to the camp. We will depart from the Bernoulliborg(University Building) and we will arrive on sunday at the Central Station in Groningen so decide where you want to put your bicycle. <br /><br />
 		
-		Met vriendelijke groet, <br />
-		de IntroCie
+		Yours faithfully, <br />
+		de IntroCie(the introduction committee)
 	</body>
 </html>
