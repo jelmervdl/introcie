@@ -172,8 +172,6 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    </div>
 </div>
 <script>
-   var links = $("nav .menu a[href^=#]");
-
    var panels = $('.panel');
 
    var parallax_panels = $('.parallax-panel');
@@ -194,7 +192,7 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
 
    /* Vang links in navigatie af zodat ze scrollen ipv springen */
 
-   links.bind("click",function(event){
+   $('a[href^=#]').bind("click",function(event){
       event.preventDefault();
       var target = $(this).attr("href");
       
@@ -258,7 +256,7 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    {
       panels.each(function() {
          var is_frontmost = Math.abs(this.offsetLeft - window.scrollX) < window.innerWidth / 2;
-         links.filter('[href=#' + this.id + ']').toggleClass('visible', is_frontmost);
+         $('nav .menu a[href=#' + this.id + ']').toggleClass('visible', is_frontmost);
       });
    }
 
