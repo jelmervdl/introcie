@@ -127,7 +127,7 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
 
             <tr>
                <td></td>
-               <td><?php echo $html_checkbox('akkosten', 'ja', 'I agree to the cost of &euro; XX.00') ?></td>
+               <td><?php echo $html_checkbox('akkosten', 'ja', 'I agree to the cost of &euro; <span class="kosten">30,00</span>') ?></td>
             </tr>
             
             <tr>

@@ -40,7 +40,7 @@ function include_translation($file, array $variables = array())
 
 function inschrijving_geopend()
 {
-   return false;
+   return true;
 }
 
 function inschrijving_gesloten()
@@ -232,6 +232,18 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
 
       // $('body').css('background-size', (window.innerWidth * panels.length) + 'px 100%');
    }
+
+   function update_inschrijfkosten()
+   {
+      var is_sjaars = $('#inschrijven select[name=deelnemer]').val() == 'sjaars';
+      $('#inschrijven .kosten').text(is_sjaars ? '30,00' : '35,00');
+   }
+
+   // Inschrijfkosten zijn afhankelijk van wie zich inschrijft
+   $('#inschrijven select[name=deelnemer]').change(update_inschrijfkosten);
+
+   // (ook onload, immers, het kan zijn dat we een fout opgestuurd formulier krijgen)
+   update_inschrijfkosten();
 
    // Positioneer de panelen ten opzichte van de scroll-afstand
    function update_parallax()
