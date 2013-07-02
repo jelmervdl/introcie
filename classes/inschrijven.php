@@ -58,15 +58,24 @@ Class Inschrijven
 			implode(', ', array_keys($data)),
 			implode(', ', array_map(array($this, 'mysql_quote'), array_values($data))));
 
+		// Gebruik UTF-8 voor de INSERT-query
+		@mysql_query("SET NAMES 'utf8'");
+
 		if (($res = mysql_query($query)) === false)
 			return 'Error';
 		
 		$table_rows = array();
 
 		foreach ($data as $field => $value)
+		{
+			// Sla random-id maar over, die hoeft er niet in
+			if ($field == 'random_id')
+				continue;
+
 			$table_rows[] = sprintf('<tr><td>%s</td><td>%s</td></tr>',
 				ucfirst($field),
-				htmlentities($value, ENT_COMPAT, 'iso-8859-1'));
+				htmlentities($value, ENT_COMPAT, 'UTF-8'));
+		}
 
 		$this->sendmail($input['email'], $input['voornaam'], implode("\r\n", $table_rows));
 		
