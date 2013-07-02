@@ -77,7 +77,11 @@ Class Inschrijven
 				htmlentities($value, ENT_COMPAT, 'UTF-8'));
 		}
 
+		// Kopie voor de kamploper
 		$this->sendmail($input['email'], $input['voornaam'], implode("\r\n", $table_rows));
+
+		// Kopie voor de intocie backup
+		$this->sendmail('introcie@svcover.nl', $input['voornaam'], implode("\r\n", $table_rows));
 		
 		return "True";
 	}
