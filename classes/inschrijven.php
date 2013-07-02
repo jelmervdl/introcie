@@ -21,7 +21,8 @@ Class Inschrijven
 			// 'betaald',
 			'rekeningnummer',
 			'akkosten',
-			'akvoorwaarden');
+			'akvoorwaarden',
+			'random_id');
 
 		$optional = array('mededeling', 'tussenvoegsel', 'thuisnummer', 'vega');
 

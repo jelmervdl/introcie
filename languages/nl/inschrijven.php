@@ -75,7 +75,9 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
    <h2>Inschrijven Introkamp</h2>
    <form method="POST" action="index.php#inschrijven">
 
-      <?php if ($inschrijving): ?>
+      <input type="hidden" name="random_id" value="<?=uniqid()?>">
+
+   <?php if ($inschrijving): ?>
       <p class="error">Je hebt een fout gemaakt bij het invullen van het formulier.</p>
    <?php endif ?>
    
