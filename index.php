@@ -77,6 +77,15 @@ $lang_menu = include sprintf('languages/%s/menu.php', $lang);
    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
    
    <script src="jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+   <?php if (date('md') == '0705'): ?>
+   <!-- Comic Sans-day! -->
+   <style>
+      body {
+         font-family: Comic Sans MS;
+      }
+   </style>
+   <?php endif ?>
 </head>
 <body>
 
