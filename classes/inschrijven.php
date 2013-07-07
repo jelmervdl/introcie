@@ -31,6 +31,8 @@ Class Inschrijven
 		$input['telefoonnummer'] = $this->clean_phone_number($input['telefoonnummer']);
 		$input['thuisnummer'] = $this->clean_phone_number($input['thuisnummer']);
 
+		$input['vega'] = isset($input['vega']) && $input['vega'] == 'ja' ? 'ja' : 'nee';
+
 		if (!$this->check_email_address($input['email']))
 			return 'email';
 
@@ -42,6 +44,12 @@ Class Inschrijven
 
 		if (!ctype_digit($input['rekeningnummer']))
 			return 'rekeningnummer';
+
+		if (!in_array($input['deelnemer'], array('sjaars', 'ouderejaars', 'mentor')))
+			return 'deelnemer';
+
+		if (!in_array($input['opleiding'], array('KI', 'INF', 'Anders')))
+			return 'opleiding';
 
 		$data = array();
 
