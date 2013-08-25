@@ -7,7 +7,7 @@ class data
 	public function connect(){
 		$db = "introcie";
 		$user = "introcie";
-		$host = "127.0.0.1";
+		$host = "localhost";
 		$password = "password";
 		
 		$connection = mysql_connect($host, $user, $password) or die(mysql_error());

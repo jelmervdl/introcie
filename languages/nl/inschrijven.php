@@ -187,7 +187,7 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
                <li>Indien na de initiële Inschrijfdeadline nog plekken beschikbaar zijn, wordt het "first come first served" principe aangehouden tot het verstrijken van de uiterste Inschrijfdeadline.</li>
                <li>De IntroCie behoudt zich het recht om, zonder opgaaf van reden, mensen toegang te geven (of ontzeggen) voor deelname aan het kamp.</li>
                <li>De inschrijving, en alle daaruit voortvloeiende verplichtingen en rechten, vervallen als de ingeschrevene bij een overinschrijving uitgeloot wordt.</li>
-               <li>In het geval van wangedrag, voor of tijdens  het IntroKamp, staat het de IntroCie vrij om de persoon of personen in kwestie per direct van verdere deelname uit te sluiten. De deelnemer blijft het bedrag verschuldigd aan Cover.</li>
+               <li>In het geval van wangedrag, voor of tijdens het introkamp, staat het de IntroCie vrij om de persoon of personen in kwestie per direct van verdere deelname uit te sluiten. De deelnemer blijft het bedrag verschuldigd aan Cover.</li>
             </ul>
             <h4>Artikel 6. Betaling</h4>
             <ul>
@@ -203,7 +203,7 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
             <ul>
                <li>Annulering voor de initiële Inschrijfdeadline (16 augustus 2013): Geen kosten.</li>
                <li>Annulering na de uiterlijke Inschrijfdeadline (28 augustus 2013): Volledige Deelnemersbedrag.</li>
-               <li>Annulering tussen na de initiële Inschrijfdatum (16 augustus 2013) en voor de uiterlijke Inschrijfdeadline (28 augustus 2013): Halve Deelnemersbedrag.</li>
+               <li>Annulering tussen na de initiële Inschrijfdatum (16 augustus 2013) en voor de uiterlijke Inschrijfdeadline (28 augustus 2013): Halve deelnemersbedrag.</li>
             </ul>
             <li>Onverwijlde annulering door een overmacht situatie, ontslaat deelnemer niet van zijn verplichting, om na sluiting van de inschrijfperiode, de deelnamekosten te betalen. </li>
          </ul>
@@ -214,8 +214,8 @@ $html_checkbox = function($name, $value, $label) use ($inschrijving)
             <li>tekortkomingen in de uitvoering van de overeenkomst op grond van omstandigheden die zijn toe te rekenen aan de deelnemer, waaronder begrepen schades die het gevolg zijn van de gezondheidsconditie van de deelnemer;</li>
             <li>handelingen en invloeden van niet direct bij de uitvoering van de omstandigheden betrokken derden; </li>
             <li>omstandigheden die niet te wijten zijn aan de schuld van de IntroCie en/of krachtens de wet of de in het maatschappelijk verkeer geldende normen niet in redelijkheid aan de IntroCie kunnen worden toegerekend</li>
-            <li>De IntroCie is niet aansprakelijk voor schade van de deelnemer die ontstaat doordat de IntroCie aan deelnemer onjuiste of onvolledige informatie heeft verstrekt. </li>
-            <li>De Introcie is niet aansprakelijk voor enige gevolgschade of indirecte schade die het gevolg is van een handeling van de deelnemer, die krachtens het in het maatschappelijk verkeer aan hem is toe te rekenen en waartoe een schadeverplichting krachtens de wet bestaat. </li>
+            <li>de IntroCie is niet aansprakelijk voor schade van de deelnemer die ontstaat doordat de IntroCie aan deelnemer onjuiste of onvolledige informatie heeft verstrekt. </li>
+            <li>de Introcie is niet aansprakelijk voor enige gevolgschade of indirecte schade die het gevolg is van een handeling van de deelnemer, die krachtens het in het maatschappelijk verkeer aan hem is toe te rekenen en waartoe een schadeverplichting krachtens de wet bestaat. </li>
          </ul>
 
       </div>

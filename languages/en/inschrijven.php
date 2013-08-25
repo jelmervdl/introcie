@@ -10,7 +10,7 @@ $fields = array(
    'telefoonnummer' => 'Phone number',
    'thuisnummer' => 'Home phone number',
    'email' => 'Email',
-   'rekeningnummer' => 'Account'
+   'rekeningnummer' => 'Bank Account nr.'
    );
 
 $html_select = function($name, array $options) use ($inschrijving)

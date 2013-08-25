@@ -37,7 +37,7 @@
 	<li>Deodorant</li>
 	<li>Anti-sunburn creme</li>
 	<li>Medicines (if neccessary)</li>
-	<li>Manstrual pad or the like (if neccessary)</li>
+	<li>Menstrual pad or the like (if neccessary)</li>
 	<li>Hairbrush (if neccessary)</li>
 	<li>Ballpit ball</li>
 </ul>
