@@ -78,7 +78,7 @@ h3, h4 {
 	border: none;
 }
 
-p {
+p, form > table {
 	margin: 1em 0;
 }
 
