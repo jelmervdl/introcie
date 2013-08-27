@@ -45,7 +45,7 @@ function inschrijving_geopend()
 
 function inschrijving_gesloten()
 {
-   return date('j') > 16 && date('n') > 8;
+   return date('j') >= 28 && date('n') >= 8;
 }
 
 /* Verbind met de database voor inschrijvingen (en gastenboek later) */
